@@ -132,11 +132,11 @@ class SequenceDataset(Dataset):
             trans_path = f"{parts[-2]}-{parts[-1]}.trans.txt"
             path = os.path.join(self.libri_root, dir, trans_path)
 
-            try:
-                assert os.path.exists(path)
-            except AssertionError:
-                continue
-
+            # try:
+            #     assert os.path.exists(path)
+            # except AssertionError:
+            #     continue
+            assert os.path.exists(path)
             with open(path, "r") as trans_f:
                 for line in trans_f:
                     lst = line.strip().split()
