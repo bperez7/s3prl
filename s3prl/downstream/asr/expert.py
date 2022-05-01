@@ -289,6 +289,8 @@ class DownstreamExpert(nn.Module):
         records['pred_tokens'] += pred_tokens_batch
         records['pred_words'] += pred_words_batch
         records['filenames'] += filenames
+        
+        print(records['pred_words'])
 
         return loss
 
