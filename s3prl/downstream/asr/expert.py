@@ -291,6 +291,7 @@ class DownstreamExpert(nn.Module):
         records['filenames'] += filenames
         
         print(records['pred_words'])
+        print(records['filenames'])
 
         return loss
 
