@@ -290,8 +290,6 @@ class DownstreamExpert(nn.Module):
         records['pred_words'] += pred_words_batch
         records['filenames'] += filenames
         
-        print(records["pred_words"])
-        print(records["filenames"])
         return loss
 
     # interface
