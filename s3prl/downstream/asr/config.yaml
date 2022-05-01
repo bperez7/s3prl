@@ -1,9 +1,9 @@
 runner:
-  total_steps: 200000
+  total_steps: 20000
   gradient_clipping: 1
   gradient_accumulate_steps: 1
   log_step: 100
-  eval_step: 2000
+  eval_step: 200
   save_step: 500
   max_keep: 1
   eval_dataloaders:
@@ -43,12 +43,15 @@ downstream_expert:
     dev-other: ['dev-other']
     test-clean: ['test-clean']
     test-other: ['test-other']
+    dev-clean-synth: ['dev-clean-synth']
+    dev-clean-record: ['dev-clean-record']
+    dev-clean-me: ['dev-clean-me']
     num_workers: 12
     train_batch_size: 32
     batch_size: 32
     eval_batch_size: 1
-    libri_root: '/app/data/LibriSpeech'
-    bucket_file: './data/librispeech/len_for_bucket'
+    libri_root: './LibriSpeechSongs'
+    bucket_file: './data/len_for_bucket'
     dict_path: "./downstream/asr/char.dict"
 
     zero_infinity: True
