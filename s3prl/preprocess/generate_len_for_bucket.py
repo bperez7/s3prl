@@ -90,7 +90,7 @@ def main():
         SETS = ['small', 'medium', 'large'] + ['small-splitted', 'medium-splitted', 'large-splitted']
     elif 'librispeech' in args.input_data.lower():
         SETS = ['train-clean-100', 'train-clean-360', 'train-other-500', 'dev-clean', 'dev-other', 'test-clean', 'test-other',
-                'dev-clean-record', 'dev-clean-synth', 'dev-clean-me']
+                'dev-clean-record', 'dev-clean-synth', 'dev-clean-me', 'dev-clean-fore']
     elif 'timit' in args.input_data.lower():
         SETS = ['TRAIN', 'TEST']
     else:
