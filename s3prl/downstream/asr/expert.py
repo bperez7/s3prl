@@ -290,6 +290,8 @@ class DownstreamExpert(nn.Module):
         records['pred_words'] += pred_words_batch
         records['filenames'] += filenames
         
+        
+        
         return loss
 
     # interface
@@ -337,6 +339,9 @@ class DownstreamExpert(nn.Module):
             records['pred_tokens'],
             records['pred_words'],
         )
+        
+        print(records['pred_words'])
+        print(records['filenames'])
 
         logger.add_scalar(f'asr/{split}-loss', loss, global_step=global_step)
         logger.add_scalar(f'asr/{split}-uer', uer, global_step=global_step)
