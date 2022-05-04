@@ -46,6 +46,7 @@ downstream_expert:
     dev-clean-synth: ['dev-clean-synth']
     dev-clean-record: ['dev-clean-record']
     dev-clean-me: ['dev-clean-me']
+    dev-clean-fore: ['dev-clean-fore']
     num_workers: 12
     train_batch_size: 32
     batch_size: 32
